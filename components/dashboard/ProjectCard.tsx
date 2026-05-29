@@ -3,7 +3,7 @@ import type { Project } from '@/lib/types'
 export default function ProjectCard({ project }: { project: Project }) {
     return (
         <div className="rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <div className={`h-2 bg-gradient-to-r ${project.color}`} />
+            <div className={`h-1.5 bg-gradient-to-r ${project.color}`} />
 
             <div className="p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-1">{project.name}</h2>

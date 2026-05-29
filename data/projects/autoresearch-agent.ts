@@ -19,7 +19,7 @@ const autoresearchAgent: Project = {
         'ai-ml-4a', 'ai-ml-4b',
         'production-5a', 'production-5b',
     ],
-    color: 'from-violet-500 to-purple-600',
+    color: 'from-violet-600 to-purple-700',
 }
 
 export default autoresearchAgent

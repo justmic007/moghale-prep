@@ -25,7 +25,7 @@ export default function Dashboard() {
       <section className="bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-10">
           <div className="flex items-start justify-between flex-wrap gap-6">
-            <div className="max-w-xl">
+            <div className="max-w-xl w-full">
               <h1 className="text-4xl font-bold text-gray-900 mb-2">
                 Learn by doing
               </h1>
@@ -73,15 +73,42 @@ export default function Dashboard() {
               {projects.length} project{projects.length !== 1 ? 's' : ''}
             </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl">
             {projects.map(project => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </section>
 
-        {/* Divider */}
-        <div className="border-t border-gray-200 mb-14" />
+        {/* Progress prompt or stats */}
+        <div className="border-t border-gray-200 mb-10 pt-10">
+          {stats.totalCompleted === 0 ? (
+            <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-5 mb-8 flex items-center gap-4">
+              <span className="text-3xl">👋</span>
+              <div>
+                <p className="font-semibold text-indigo-900 text-sm">Start with Python Foundations 1a</p>
+                <p className="text-indigo-700 text-xs mt-0.5">
+                  Quizzes unlock progressively. Complete each one to advance to the next track.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="flex gap-8 mb-8">
+              <div className="text-center">
+                <p className="text-3xl font-bold text-indigo-600">{stats.totalCompleted}</p>
+                <p className="text-xs text-gray-500 mt-0.5">Completed</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-green-600">{stats.totalPassed}</p>
+                <p className="text-xs text-gray-500 mt-0.5">Passed</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-gray-700">{stats.averageScore}%</p>
+                <p className="text-xs text-gray-500 mt-0.5">Avg Score</p>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Quiz tracks */}
         <section>

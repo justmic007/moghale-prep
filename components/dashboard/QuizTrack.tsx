@@ -11,7 +11,7 @@ export default function QuizTrack({
     if (quizzes.length === 0) return null
 
     return (
-        <section className="mb-12">
+        <section className="mb-10 bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-5">
                 <div className={`h-8 w-1 rounded-full bg-gradient-to-b ${track.color}`} />
                 <div>
@@ -19,7 +19,7 @@ export default function QuizTrack({
                     <p className="text-sm text-gray-500">{track.description}</p>
                 </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {quizzes.map(quiz => (
                     <QuizCard key={quiz.id} quiz={quiz} />
                 ))}

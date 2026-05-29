@@ -35,13 +35,9 @@ export default function QuizCard({ quiz }: { quiz: Quiz }) {
     `}>
             {/* Lock overlay */}
             {!unlocked && (
-                <div className="absolute inset-0 flex items-center justify-center rounded-xl bg-white/80 z-10">
-                    <div className="text-center">
-                        <span className="text-3xl">🔒</span>
-                        <p className="text-xs text-gray-500 mt-1">
-                            Complete prerequisites first
-                        </p>
-                    </div>
+                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center rounded-b-xl bg-white/90 z-10 py-3 border-t border-gray-100">
+                    <span className="text-sm mr-1.5">🔒</span>
+                    <p className="text-xs text-gray-500">Complete prerequisites first</p>
                 </div>
             )}
 
