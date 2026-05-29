@@ -520,7 +520,7 @@ def _try_mistral(context: str) -> tuple[str, int]:
             answers: [
                 { id: 'a', text: 'It is a mistake — imports should always be at the top', isCorrect: false },
                 { id: 'b', text: 'Lazy imports mean the SDK is only loaded if that provider is actually called — saving startup time and memory if a provider is never used', isCorrect: true },
-                { id: 'c', text: 'Inside-function imports are faster to execute', isControls: false, isCorrect: false },
+                { id: 'c', text: 'Inside-function imports are faster to execute', isCorrect: false },
                 { id: 'd', text: 'It prevents circular import errors', isCorrect: false },
             ],
             explanation:
