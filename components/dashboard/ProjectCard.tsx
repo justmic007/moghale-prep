@@ -64,10 +64,10 @@ export default function ProjectCard({
 
                 <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
                     <span>📚 {project.quizIds.length} quizzes</span>
-                    <span>❓ {project.quizIds.length * 20} questions</span>
+                    <span>🎯 {project.quizIds.length * 20} questions</span>
                 </div>
 
-                <div className="flex gap-2" onClick={e => e.stopPropagation()}>
+                <div className="flex gap-2 flex-wrap" onClick={e => e.stopPropagation()}>
                     <a
                         href={project.githubUrl}
                         target="_blank"

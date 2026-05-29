@@ -42,13 +42,12 @@ export default function Dashboard() {
             <h1 className="text-4xl font-bold text-gray-900 mb-3 leading-tight">
               Learn by doing
             </h1>
-            <p className="text-gray-500 leading-relaxed text-base max-w-lg">
-              Questions grounded in real production code — not just <em>what</em> but <em>why</em>.
-              Prepare for Senior Software Engineer and AI Engineer interviews.
+            <p className="text-gray-500 text-base">
+              Real production code questions — understand not just <em>what</em>, but <em>why</em>.
             </p>
 
             {/* Quick stats row */}
-            <div className="flex flex-wrap gap-6 mt-6 pt-6 border-t border-gray-100">
+            <div className="flex flex-wrap gap-x-6 gap-y-3 mt-6 pt-6 border-t border-gray-100">
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <span className="text-lg">📚</span>
                 <span><strong className="text-gray-800">{allQuizzes.length}</strong> quizzes</span>

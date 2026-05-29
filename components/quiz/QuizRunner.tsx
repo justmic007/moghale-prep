@@ -198,8 +198,8 @@ export default function QuizRunner({ quiz }: { quiz: Quiz }) {
                     onClick={handlePrev}
                     disabled={isFirst}
                     className={`px-4 py-3 rounded-lg border text-sm font-medium transition-colors ${isFirst
-                            ? 'border-gray-100 text-gray-300 cursor-not-allowed'
-                            : 'border-gray-300 text-gray-600 hover:bg-gray-50'
+                        ? 'border-gray-100 text-gray-300 cursor-not-allowed'
+                        : 'border-gray-300 text-gray-600 hover:bg-gray-50'
                         }`}
                 >
                     ← Prev
@@ -211,12 +211,13 @@ export default function QuizRunner({ quiz }: { quiz: Quiz }) {
                         <button
                             onClick={handleSubmit}
                             disabled={!selected}
-                            className={`flex-1 py-3 px-4 rounded-lg font-medium text-sm transition-colors ${selected
-                                    ? 'bg-indigo-600 text-white hover:bg-indigo-700'
-                                    : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                            className={`flex-1 py-3 px-2 rounded-lg font-medium text-sm transition-colors ${selected
+                                ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                                : 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                 }`}
                         >
-                            Submit Answer
+                            <span className="hidden sm:inline">Submit Answer</span>
+                            <span className="sm:hidden">Submit</span>
                         </button>
                         <button
                             onClick={handleSkip}
@@ -248,13 +249,13 @@ export default function QuizRunner({ quiz }: { quiz: Quiz }) {
                             key={q.id}
                             onClick={() => goToIndex(i)}
                             title={`Question ${i + 1}`}
-                            className={`w-7 h-7 rounded-full text-xs font-medium transition-colors ${isCurrent
-                                    ? 'ring-2 ring-indigo-500 ring-offset-1 bg-indigo-600 text-white'
-                                    : isAnswered
-                                        ? isCorrect
-                                            ? 'bg-green-500 text-white'
-                                            : 'bg-red-400 text-white'
-                                        : 'bg-gray-200 text-gray-500 hover:bg-gray-300'
+                            className={`w-6 h-6 rounded-full text-xs font-medium transition-colors ${isCurrent
+                                ? 'ring-2 ring-indigo-500 ring-offset-1 bg-indigo-600 text-white'
+                                : isAnswered
+                                    ? isCorrect
+                                        ? 'bg-green-500 text-white'
+                                        : 'bg-red-400 text-white'
+                                    : 'bg-gray-200 text-gray-500 hover:bg-gray-300'
                                 }`}
                         >
                             {i + 1}
